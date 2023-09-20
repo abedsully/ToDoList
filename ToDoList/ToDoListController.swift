@@ -18,7 +18,7 @@ class ToDoListController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let items = defaults.array(forKey: "ToDoListArray") as? [String] {
+        if let items = defaults.array(forKey: Constant.userDefaultKey) as? [String] {
             itemArray = items
         }
     }
@@ -30,7 +30,7 @@ class ToDoListController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoListCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.cellIdentifier, for: indexPath)
         
         cell.textLabel?.text = itemArray[indexPath.row]
         
@@ -63,19 +63,19 @@ class ToDoListController: UITableViewController {
         var textField = UITextField()
         
         // message here is the text under the title
-        let alert = UIAlertController(title: "Add New ToDoList Item", message: "", preferredStyle: .alert)
+        let alert = UIAlertController(title: Constant.alertTitle, message: "", preferredStyle: .alert)
         
         
         //handle closure
-        let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
+        let action = UIAlertAction(title: Constant.alertActionTitle, style: .default) { (action) in
             self.itemArray.append(textField.text!)
-            self.defaults.set(self.itemArray, forKey: "ToDoListArray")
+            self.defaults.set(self.itemArray, forKey: Constant.userDefaultKey)
             self.tableView.reloadData()
         }
         
         
         alert.addTextField { (alertTextField) in
-            alertTextField.placeholder = "Enter new to do list"
+            alertTextField.placeholder = Constant.alertTextFieldPlaceHolder
             textField = alertTextField
         }
         
