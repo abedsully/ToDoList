@@ -23,7 +23,7 @@ class ToDoListController: UITableViewController {
         
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         
-//        loadItems()
+        loadItems()
     }
     
     // MARK: - Tableview Datasource Methods
@@ -49,6 +49,8 @@ class ToDoListController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
         
         
         itemArray[indexPath.row].done = !itemArray[indexPath.row].done
@@ -99,7 +101,6 @@ class ToDoListController: UITableViewController {
     // MARK: - Model Manipulation Methods
     
     func saveItems(){
-        let encoder = PropertyListEncoder()
         
         do{
             try context.save()
@@ -111,23 +112,17 @@ class ToDoListController: UITableViewController {
 
     }
     
-//    func loadItems(){
-//
-//        do{
-//            if let data = try? Data(contentsOf: dataFilePath!){
-//                let decoder = PropertyListDecoder()
-//
-//                do{
-//                    itemArray = try decoder.decode([Item].self, from: data)
-//                } catch{
-//                    print("Error decoding item array, \(error)")
-//                }
-//
-//            }
-//
-//        }
-//
-//    }
+    func loadItems(){
+        let request: NSFetchRequest<Item> = Item.fetchRequest()
+        
+        
+        do{
+            itemArray = try context.fetch(request)
+        } catch{
+            print("Error fetching \(error)")
+        }
+        
+    }
     
 }
 
