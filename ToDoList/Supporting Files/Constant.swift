@@ -12,6 +12,11 @@ struct Constant{
     static let cellIdentifier = "ToDoListCell"
     static let userDefaultKey = "ToDoListArray"
     static let alertTitle = "Add New ToDoList Item"
+    static let alertTitleCategory = "Add New Item Category"
     static let alertActionTitle = "Add Item"
+    static let alertActionCategory = "Add Category"
     static let alertTextFieldPlaceHolder = "Enter new to do list"
+    static let alertTextFieldCategoryPlaceHolder = "Enter new category"
+    static let categoryCellIdentifier = "CategoryCell"
 }
+
