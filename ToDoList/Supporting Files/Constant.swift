@@ -18,5 +18,6 @@ struct Constant{
     static let alertTextFieldPlaceHolder = "Enter new to do list"
     static let alertTextFieldCategoryPlaceHolder = "Enter new category"
     static let categoryCellIdentifier = "CategoryCell"
+    static let segueIdentifier = "goToItems"
 }
 

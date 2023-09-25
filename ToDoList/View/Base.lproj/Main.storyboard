@@ -40,7 +40,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="xYZ-XQ-jmT" kind="show" identifier="GoToItems" id="fqI-11-PZ2"/>
+                        <segue destination="xYZ-XQ-jmT" kind="show" identifier="goToItems" id="fqI-11-PZ2"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bXf-dH-yJK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -125,6 +125,7 @@
             <point key="canvasLocation" x="-262" y="23"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
