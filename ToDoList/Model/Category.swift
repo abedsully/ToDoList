@@ -11,7 +11,6 @@ import RealmSwift
 class Category: Object{
     @objc dynamic var name: String = ""
     
-    // List to make relationship between entity
     let items = List<Item>()
 }
 
