@@ -9,7 +9,7 @@ import Foundation
 
 
 struct Constant{
-    static let cellIdentifier = "ToDoListCell"
+    static let cellIdentifier = "Cell"
     static let userDefaultKey = "ToDoListArray"
     static let alertTitle = "Add New ToDoList Item"
     static let alertTitleCategory = "Add New Item Category"

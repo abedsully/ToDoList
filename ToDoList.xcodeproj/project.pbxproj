@@ -81,8 +81,8 @@
 		A0BC88E52ABB55AD00706AA6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A0E8981D2AB8075F00E5BF2C /* ToDoListController.swift */,
 				A00A921E2AC062CD00C84B0A /* CategoryViewController.swift */,
+				A0E8981D2AB8075F00E5BF2C /* ToDoListController.swift */,
 				A05E51042AC48D3200742126 /* SwipeTableViewController.swift */,
 			);
 			path = Controller;
